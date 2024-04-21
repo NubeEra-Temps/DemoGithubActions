@@ -2,7 +2,7 @@ name: 'My Job will help to Planning for display Message'
 on: 
   push:
     branches:
-      - "main"
+      - "dev"
 jobs:
   Job-Message-Actions:
     runs-on: ubuntu-latest

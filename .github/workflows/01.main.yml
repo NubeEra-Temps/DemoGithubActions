@@ -1,0 +1,19 @@
+name: 'Job Workflow Dispatch 001'
+on: 
+  workflow_dispatch:    
+jobs:
+  Job-Message-Actions:
+    runs-on: windows-latest
+
+    steps:
+      - name: Download File
+        run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+        
+      - name: Extract Downloaded File
+        run: Expand-Archive ngrok.zip
+
+      - name: Display Extracted File
+        run: ls
+      - name: Display Token Value
+        run: $Env:NGROK_AUTH_TOKEN
+      
